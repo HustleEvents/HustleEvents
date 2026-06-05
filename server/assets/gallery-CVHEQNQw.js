@@ -1,6 +1,6 @@
 import { jsxs, Fragment, jsx } from "react/jsx-runtime";
 import { P as PageHero } from "./PageHero-C_1y5o1k.js";
-import { h as heroImg } from "./router-DT3USkvF.js";
+import { h as heroImg } from "./router-DL4AqU1g.js";
 import { g as gardenImg, c as celebrationImg, a as corporateImg } from "./event-celebration-orExBWXq.js";
 import { d as detailImg } from "./event-detail-CQvnD1CQ.js";
 import "@tanstack/react-query";

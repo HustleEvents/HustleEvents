@@ -1,7 +1,7 @@
 import { jsxs, Fragment, jsx } from "react/jsx-runtime";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, Sparkles, Gem, Calendar } from "lucide-react";
-import { h as heroImg } from "./router-DT3USkvF.js";
+import { h as heroImg } from "./router-DL4AqU1g.js";
 import { g as gardenImg, a as corporateImg, c as celebrationImg } from "./event-celebration-orExBWXq.js";
 import { d as detailImg } from "./event-detail-CQvnD1CQ.js";
 import { S as SectionHeading } from "./SectionHeading-CQh4g071.js";

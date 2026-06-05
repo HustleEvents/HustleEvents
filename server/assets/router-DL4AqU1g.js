@@ -3,7 +3,7 @@ import { Link, createRootRouteWithContext, useRouter, Outlet, HeadContent, Scrip
 import { jsxs, jsx } from "react/jsx-runtime";
 import { useState, useEffect } from "react";
 import { X, Menu, Mail, Phone, Instagram, Facebook } from "lucide-react";
-const appCss = "/assets/styles-BDudpP3d.css";
+const appCss = "/assets/styles-BjD9ehmv.css";
 function reportLovableError(error, context = {}) {
   if (typeof window === "undefined") return;
   window.__lovableEvents?.captureException?.(
@@ -314,7 +314,7 @@ const Route$4 = createFileRoute("/services")({
   component: lazyRouteComponent($$splitComponentImporter$4, "component")
 });
 const heroImg = "/assets/hero-wedding-Dq6tn04-.jpg";
-const $$splitComponentImporter$3 = () => import("./gallery-BdlggieH.js");
+const $$splitComponentImporter$3 = () => import("./gallery-CVHEQNQw.js");
 const Route$3 = createFileRoute("/gallery")({
   head: () => ({
     meta: [{
@@ -371,7 +371,7 @@ const Route$1 = createFileRoute("/about")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-const $$splitComponentImporter = () => import("./index-D3oxnyLW.js");
+const $$splitComponentImporter = () => import("./index-CrqrHo42.js");
 const Route = createFileRoute("/")({
   head: () => ({
     meta: [{
