@@ -1,4 +1,5 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import { SiteFooter } from "./components/SiteFooter";
 import { SiteHeader } from "./components/SiteHeader";
 import AboutPage from "./routes/about";
@@ -6,6 +7,16 @@ import ContactPage from "./routes/contact";
 import GalleryPage from "./routes/gallery";
 import HomePage from "./routes/index";
 import ServicesPage from "./routes/services";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0 });
+  }, [pathname]);
+
+  return null;
+}
 
 function NotFoundPage() {
   return (
@@ -25,7 +36,8 @@ export default function App() {
   return (
     <div className="min-h-screen bg-background text-ink">
       <SiteHeader />
-      <main className="pt-[104px]">
+      <ScrollToTop />
+      <main className="min-h-screen">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />

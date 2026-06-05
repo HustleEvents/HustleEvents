@@ -30,18 +30,18 @@ export function SiteHeader() {
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 md:px-10">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 md:px-8">
         <Link to="/" className="group flex items-center gap-3" onClick={() => setOpen(false)}>
-          <img src={HustleLogo} alt="HustleEvents logo" width={180} height={180} className="h-25 w-25 rounded-full object-contain" />
+          <img src={HustleLogo} alt="HustleEvents logo" width={180} height={280} className="h-28 w-22 rounded-full object-contain" />
           <div className="text-left">
-            <div className="font-display text-xl tracking-wide text-ink">
+            <div className="font-display text-lg tracking-wide text-ink">
               Hustle<span className="text-gold">Events</span>
             </div>
-            <div className="text-[11px] tracking-[0.24em] text-muted-foreground lowercase">by Naveen</div>
+            <div className="text-[10px] tracking-[0.24em] text-muted-foreground lowercase pl-16">by Naveen</div>
           </div>
         </Link>
 
-        <nav className="hidden items-center gap-10 md:flex">
+        <nav className="hidden items-center gap-8 md:flex">
           {nav.map((n) => (
             <NavLink
               key={n.to}
@@ -49,7 +49,7 @@ export function SiteHeader() {
               end={n.to === "/"}
               className={({ isActive }) =>
                 `link-underline text-[12px] font-medium uppercase tracking-[0.22em] text-ink/80 hover:text-ink ${
-                  isActive ? "text-ink" : ""
+                  isActive ? "text-ink decoration-gold underline underline-offset-4" : ""
                 }`
               }
             >
@@ -84,8 +84,8 @@ export function SiteHeader() {
                 end={n.to === "/"}
                 onClick={() => setOpen(false)}
                 className={({ isActive }) =>
-                  `py-3 text-[12px] font-medium uppercase tracking-[0.24em] text-ink ${
-                    isActive ? "text-gold" : ""
+                  `py-3 text-[12px] font-medium uppercase tracking-[0.24em] ${
+                    isActive ? "text-gold underline decoration-gold underline-offset-4" : "text-ink"
                   }`
                 }
               >

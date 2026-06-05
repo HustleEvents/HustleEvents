@@ -14,7 +14,7 @@ export function SiteFooter() {
                 <div className="font-display text-2xl text-ink">
                   Hustle<span className="text-gold">Events</span>
                 </div>
-                <div className="text-sm tracking-[0.24em] text-muted-foreground lowercase">by Naveen</div>
+                <div className="text-sm tracking-[0.24em] text-muted-foreground lowercase pl-16">by Naveen</div>
               </div>
             </div>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-muted-foreground">
