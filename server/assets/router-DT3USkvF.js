@@ -314,7 +314,7 @@ const Route$4 = createFileRoute("/services")({
   component: lazyRouteComponent($$splitComponentImporter$4, "component")
 });
 const heroImg = "/assets/hero-wedding-Dq6tn04-.jpg";
-const $$splitComponentImporter$3 = () => import("./gallery-COjQTrD0.js");
+const $$splitComponentImporter$3 = () => import("./gallery-BdlggieH.js");
 const Route$3 = createFileRoute("/gallery")({
   head: () => ({
     meta: [{
@@ -335,7 +335,7 @@ const Route$3 = createFileRoute("/gallery")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$3, "component")
 });
-const $$splitComponentImporter$2 = () => import("./contact-BxgP7t5j.js");
+const $$splitComponentImporter$2 = () => import("./contact-BOQLNbPi.js");
 const Route$2 = createFileRoute("/contact")({
   head: () => ({
     meta: [{
@@ -371,7 +371,7 @@ const Route$1 = createFileRoute("/about")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-const $$splitComponentImporter = () => import("./index-g2Q_ACfK.js");
+const $$splitComponentImporter = () => import("./index-D3oxnyLW.js");
 const Route = createFileRoute("/")({
   head: () => ({
     meta: [{

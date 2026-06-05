@@ -48,7 +48,7 @@ function ContactPage() {
         ] }),
         /* @__PURE__ */ jsxs("div", { className: "border-t border-border pt-8", children: [
           /* @__PURE__ */ jsx("p", { className: "eyebrow mb-3", children: "Capacity" }),
-          /* @__PURE__ */ jsx("p", { className: "text-sm leading-relaxed text-muted-foreground", children: "We take up to twenty events a month, eight to twelve weeks out. Earlier conversations are always better." })
+          /* @__PURE__ */ jsx("p", { className: "text-sm leading-relaxed text-muted-foreground", children: "We take up to 20 events a month, eight to twelve weeks out. Earlier conversations are always better." })
         ] })
       ] }),
       /* @__PURE__ */ jsxs("div", { className: "md:col-span-8", children: [
