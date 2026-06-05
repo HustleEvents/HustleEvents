@@ -30,11 +30,11 @@ export function SiteHeader() {
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 md:px-8">
-        <Link to="/" className="group flex items-center gap-3" onClick={() => setOpen(false)}>
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-2 py-2 md:px-8">
+        <Link to="/" className="group flex items-center gap-1" onClick={() => setOpen(false)}>
           <img src={HustleLogo} alt="HustleEvents logo" width={180} height={280} className="h-28 w-22 rounded-full object-contain" />
           <div className="text-left">
-            <div className="font-display text-lg tracking-wide text-ink">
+            <div className="font-display text-2xl tracking-wide text-ink">
               Hustle<span className="text-gold">Events</span>
             </div>
             <div className="text-[10px] tracking-[0.24em] text-muted-foreground lowercase pl-16">by Naveen</div>
