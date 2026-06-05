@@ -1,22 +1,10 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import teamImg from "@/assets/about-team.jpg";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 
-export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About — HustleEvents" },
-      { name: "description", content: "Hustle Events is a full-service event company dedicated to creating unforgettable experiences with innovative planning, elegant design, and flawless execution." },
-      { property: "og:title", content: "About — HustleEvents" },
-      { property: "og:description", content: "Hustle Events crafts unforgettable weddings, celebrations, corporate events and brand launches with precision and passion." },
-    ],
-  }),
-  component: AboutPage,
-});
-
-function AboutPage() {
+export default function AboutPage() {
   return (
     <>
       <PageHero 

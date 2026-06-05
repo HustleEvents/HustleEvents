@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { Facebook, Instagram, Mail, Phone } from "lucide-react";
 import HustleLogo from "../assets/Hustle_Logo.PNG?url";
 

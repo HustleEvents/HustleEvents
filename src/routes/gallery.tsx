@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/PageHero";
 import hero from "@/assets/hero-wedding.jpg";
 import garden from "@/assets/event-garden.jpg";
@@ -6,19 +5,6 @@ import corp from "@/assets/event-corporate.jpg";
 import celeb from "@/assets/event-celebration.jpg";
 import concert from "@/assets/event-concert.jpg";
 import detail from "@/assets/event-detail.jpg";
-
-export const Route = createFileRoute("/gallery")({
-  head: () => ({
-    meta: [
-      { title: "Gallery — HustleEvents" },
-      { name: "description", content: "Selected evenings, ceremonies, productions and private moments from the HustleEvents archive." },
-      { property: "og:title", content: "Gallery HustleEvents" },
-      { property: "og:description", content: "Selected evenings from the HustleEvents archive." },
-      { property: "og:image", content: hero },
-    ],
-  }),
-  component: GalleryPage,
-});
 
 const items = [
   { src: hero, t: "Candlelit Reception", c: "Wedding · '25", span: "md:col-span-8 md:row-span-2", h: "h-[80vh]" },
@@ -65,3 +51,5 @@ function GalleryPage() {
     </>
   );
 }
+
+export default GalleryPage;

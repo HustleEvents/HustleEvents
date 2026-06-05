@@ -1,21 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { Mail, Phone, MapPin, Instagram, ArrowRight } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 
-export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact — HustleEvents" },
-      { name: "description", content: "Tell us about the evening you've imagined. We accept up to twenty events a month — start the conversation early." },
-      { property: "og:title", content: "Contact — HustleEvents" },
-      { property: "og:description", content: "Tell us about the evening you've imagined." },
-    ],
-  }),
-  component: ContactPage,
-});
-
-function ContactPage() {
+export default function ContactPage() {
   const [showWhatsAppWarning, setShowWhatsAppWarning] = useState(false);
   const whatsappNumber = "7349700724";
   const whatsappUrl = `https://wa.me/91${whatsappNumber}`;

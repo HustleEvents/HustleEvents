@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { ArrowRight, Sparkles, Gem, Calendar } from "lucide-react";
 import heroImg from "@/assets/hero-wedding.jpg";
 import gardenImg from "@/assets/event-garden.jpg";
@@ -7,19 +7,7 @@ import corporateImg from "@/assets/event-corporate.jpg";
 import celebrationImg from "@/assets/event-celebration.jpg";
 import { SectionHeading } from "@/components/SectionHeading";
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "HustleEvents — Creating Experiences, Preserving Memories" },
-      { name: "description", content: "Hustle Events is a full-service event company creating unforgettable weddings, celebrations, corporate events and branded experiences with elegant design and flawless execution." },
-      { property: "og:title", content: "HustleEvents — Creating Experiences, Preserving Memories" },
-      { property: "og:description", content: "Hustle Events creates unforgettable weddings, celebrations, corporate events and branded experiences with creative planning and flawless execution." },
-    ],
-  }),
-  component: Index,
-});
-
-function Index() {
+export default function Index() {
   return (
     <>
       {/* HERO */}

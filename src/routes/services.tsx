@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -7,18 +7,6 @@ import corporateImg from "@/assets/event-corporate.jpg";
 import celebrationImg from "@/assets/event-celebration.jpg";
 import concertImg from "@/assets/event-concert.jpg";
 import detailImg from "@/assets/event-detail.jpg";
-
-export const Route = createFileRoute("/services")({
-  head: () => ({
-    meta: [
-      { title: "Services — HustleEvents" },
-      { name: "description", content: "Event planning, luxury event decor, corporate conferences, birthday celebrations, engagements, and brand launches — crafted with premium design and personalized execution." },
-      { property: "og:title", content: "Services — HustleEvents" },
-      { property: "og:description", content: "Hustle Events delivers premium weddings, corporate events, celebrations, engagements, and brand launches with thoughtful design and expert production." },
-    ],
-  }),
-  component: ServicesPage,
-});
 
 const services = [
   {
@@ -258,3 +246,5 @@ function ServicesPage() {
     </>
   );
 }
+
+export default ServicesPage;
