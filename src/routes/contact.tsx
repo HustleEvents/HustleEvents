@@ -64,7 +64,7 @@ function ContactPage() {
             <div className="border-t border-border pt-8">
               <p className="eyebrow mb-3">Capacity</p>
               <p className="text-sm leading-relaxed text-muted-foreground">
-                We take up to twenty events a month, eight to twelve weeks out. Earlier
+                We take up to 20 events a month, eight to twelve weeks out. Earlier
                 conversations are always better.
               </p>
             </div>
