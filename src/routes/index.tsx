@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Sparkles, Gem, Calendar } from "lucide-react";
-import heroImg from "@/assets/hero-wedding.jpg";
-import gardenImg from "@/assets/event-garden.jpg";
-import detailImg from "@/assets/event-detail.jpg";
-import corporateImg from "@/assets/event-corporate.jpg";
-import celebrationImg from "@/assets/event-celebration.jpg";
 import { SectionHeading } from "@/components/SectionHeading";
+
+const heroImg = new URL("../assets/hustle/WhatsApp Image 2026-06-06 at 7.13.20 PM.jpeg", import.meta.url).href;
+const gardenImg = new URL("../assets/hustle/WhatsApp Image 2026-06-06 at 7.13.09 PM.jpeg", import.meta.url).href;
+const detailImg = new URL("../assets/hustle/WhatsApp Image 2026-06-06 at 7.13.11 PM.jpeg", import.meta.url).href;
+const corporateImg = new URL("../assets/event-corporate.jpg", import.meta.url).href;
+const celebrationImg = new URL("../assets/hustle/WhatsApp Image 2026-06-06 at 7.13.13 PM.jpeg", import.meta.url).href;
 
 export default function Index() {
   return (
