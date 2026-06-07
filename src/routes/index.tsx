@@ -150,8 +150,8 @@ export default function Index() {
               <img src={gardenImg} alt="Garden ceremony at golden hour" loading="lazy" className="h-[60vh] w-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
               <figcaption className="absolute bottom-6 left-6 right-6 flex items-end justify-between text-background">
                 <div>
-                  <p className="eyebrow text-background/70">Ceremony</p>
-                  <p className="mt-1 font-display text-2xl">The Olive Garden Vows</p>
+                  <p className="eyebrow text-background/70">Naming Ceremony</p>
+                  <p className="mt-1 font-display text-2xl">Bengaluru</p>
                 </div>
                 <span className="text-[11px] uppercase tracking-[0.24em]">'25</span>
               </figcaption>
@@ -163,18 +163,18 @@ export default function Index() {
                 <p className="mt-1 font-display text-2xl">A Quiet Place Setting</p>
               </figcaption>
             </figure>
-            <figure className="group relative md:col-span-5 overflow-hidden">
+            {/* <figure className="group relative md:col-span-5 overflow-hidden">
               <img src={corporateImg} alt="Corporate gala" loading="lazy" className="h-[55vh] w-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
               <figcaption className="absolute bottom-6 left-6 right-6 text-background">
                 <p className="eyebrow text-background/70">Gala</p>
                 <p className="mt-1 font-display text-2xl">Annual Foundation Dinner</p>
               </figcaption>
-            </figure>
+            </figure> */}
             <figure className="group relative md:col-span-7 overflow-hidden">
               <img src={celebrationImg} alt="Birthday celebration" loading="lazy" className="h-[55vh] w-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
               <figcaption className="absolute bottom-6 left-6 right-6 text-ink">
-                <p className="eyebrow">Celebration</p>
-                <p className="mt-1 font-display text-2xl">A Sixtieth, in Cream & Gold</p>
+                <p className="eyebrow"></p>
+                <p className="mt-1 font-display text-2xl">1st Birthday Celebration</p>
               </figcaption>
             </figure>
           </div>

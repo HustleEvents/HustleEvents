@@ -1,9 +1,15 @@
 import { useState } from "react";
 import { PageHero } from "@/components/PageHero";
 
+type GalleryItem = {
+  src: string;
+  title: string;
+  caption: string;
+};
+
 const previewCount = 7;
 
-const items = [
+const items: GalleryItem[] = [
   {
     src: new URL("../assets/hustle/WhatsApp Image 2026-06-06 at 7.12.33 PM.jpeg", import.meta.url).href,
     title: "2026-06-06 at 7.12.33 PM",
@@ -64,16 +70,16 @@ const items = [
     title: "2026-06-06 at 7.13.10 PM",
     caption: "Gallery · HustleEvents",
   },
-  {
-    src: new URL("../assets/hustle/WhatsApp Image 2026-06-06 at 7.13.11 PM (1).jpeg", import.meta.url).href,
-    title: "2026-06-06 at 7.13.11 PM (1)",
-    caption: "Gallery · HustleEvents",
-  },
-  {
-    src: new URL("../assets/hustle/WhatsApp Image 2026-06-06 at 7.13.11 PM (2).jpeg", import.meta.url).href,
-    title: "2026-06-06 at 7.13.11 PM (2)",
-    caption: "Gallery · HustleEvents",
-  },
+  // {
+  //   src: new URL("../assets/hustle/WhatsApp Image 2026-06-06 at 7.13.11 PM (1).jpeg", import.meta.url).href,
+  //   title: "2026-06-06 at 7.13.11 PM (1)",
+  //   caption: "Gallery · HustleEvents",
+  // },
+  // {
+  //   src: new URL("../assets/hustle/WhatsApp Image 2026-06-06 at 7.13.11 PM (2).jpeg", import.meta.url).href,
+  //   title: "2026-06-06 at 7.13.11 PM (2)",
+  //   caption: "Gallery · HustleEvents",
+  // },
   {
     src: new URL("../assets/hustle/WhatsApp Image 2026-06-06 at 7.13.11 PM.jpeg", import.meta.url).href,
     title: "2026-06-06 at 7.13.11 PM",
@@ -182,20 +188,20 @@ const items = [
 ];
 
 function imageGridClasses(index: number) {
-  if (index === 0) return "md:col-span-8 md:row-span-2 h-[80vh]";
-  if (index === 1) return "md:col-span-4 h-[39vh]";
-  if (index === 2) return "md:col-span-4 h-[39vh]";
-  if (index === 3) return "md:col-span-5 h-[55vh]";
-  if (index === 4) return "md:col-span-7 h-[55vh]";
-  if (index === 5) return "md:col-span-4 h-[45vh]";
-  if (index === 6) return "md:col-span-4 h-[45vh]";
-  return "md:col-span-4 h-[45vh]";
+  if (index === 0) return "md:col-span-8 md:row-span-2";
+  if (index === 1) return "md:col-span-4";
+  if (index === 2) return "md:col-span-4";
+  if (index === 3) return "md:col-span-5";
+  if (index === 4) return "md:col-span-7";
+  if (index === 5) return "md:col-span-4";
+  if (index === 6) return "md:col-span-4";
+  return "md:col-span-4";
 }
 
 function GalleryPage() {
-  const images = items;
   const [showAll, setShowAll] = useState(false);
-  const displayedImages = showAll ? images : images.slice(0, previewCount);
+  const [selected, setSelected] = useState<GalleryItem | null>(null);
+  const displayedImages = showAll ? items : items.slice(0, previewCount);
 
   return (
     <>
@@ -209,12 +215,21 @@ function GalleryPage() {
         <div className="mx-auto max-w-7xl px-6 md:px-10">
           <div className="grid grid-cols-1 gap-4 md:grid-cols-12 md:gap-6">
             {displayedImages.map((it, i) => (
-              <figure key={it.src} className={`group relative overflow-hidden ${imageGridClasses(i)}`}>
+              <figure
+                key={it.src}
+                className={`group relative overflow-hidden ${imageGridClasses(i)}`}
+              >
+                <button
+                  type="button"
+                  onClick={() => setSelected(it)}
+                  className="absolute inset-0 z-10"
+                  aria-label={`Open ${it.title}`}
+                />
                 <img
                   src={it.src}
                   alt={it.title}
                   loading="lazy"
-                  className="w-full object-cover transition-transform duration-[1400ms] group-hover:scale-105"
+                  className="w-full max-h-[80vh] object-contain transition-all duration-[1400ms] group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                 <figcaption className="absolute bottom-0 left-0 right-0 translate-y-2 p-6 text-background opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
@@ -225,15 +240,38 @@ function GalleryPage() {
             ))}
           </div>
 
-          {images.length > previewCount && (
+          {items.length > previewCount && (
             <div className="mt-10 flex justify-center">
               <button
                 type="button"
                 onClick={() => setShowAll((prev) => !prev)}
                 className="inline-flex items-center justify-center rounded-full border border-ink px-8 py-3 text-sm font-semibold uppercase tracking-[0.28em] text-ink transition hover:bg-ink hover:text-background"
               >
-                {showAll ? "Show less" : `View more (${images.length - previewCount})`}
+                {showAll ? "Show less" : `View more (${items.length - previewCount})`}
               </button>
+            </div>
+          )}
+          {selected && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/90 p-6">
+              <button
+                type="button"
+                onClick={() => setSelected(null)}
+                className="absolute right-6 top-6 inline-flex h-11 w-11 items-center justify-center rounded-full border border-background text-background transition hover:bg-background/10"
+                aria-label="Close image viewer"
+              >
+                ✕
+              </button>
+              <div className="max-h-full max-w-full overflow-auto rounded-3xl border border-background bg-background p-4 shadow-2xl">
+                <img
+                  src={selected.src}
+                  alt={selected.title}
+                  className="max-h-[80vh] w-auto max-w-[90vw] object-contain"
+                />
+                <div className="mt-4 text-center text-sm text-muted-foreground">
+                  <div className="font-semibold text-ink">{selected.title}</div>
+                  <div>{selected.caption}</div>
+                </div>
+              </div>
             </div>
           )}
         </div>
