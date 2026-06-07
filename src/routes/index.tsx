@@ -138,7 +138,7 @@ export default function Index() {
           <div className="mb-16 flex flex-wrap items-end justify-between gap-6">
             <SectionHeading
               eyebrow="Selected Work"
-              title={<>A few <span className="italic text-gold">recent</span> evenings.</>}
+              title={<>A few <span className="italic text-gold">recent</span> events.</>}
             />
             <Link to="/gallery" className="link-underline text-[11px] font-medium uppercase tracking-[0.28em] text-ink">
               View All →
@@ -146,35 +146,26 @@ export default function Index() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-12 md:gap-8">
-            <figure className="group relative md:col-span-7 overflow-hidden">
-              <img src={gardenImg} alt="Garden ceremony at golden hour" loading="lazy" className="h-[60vh] w-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
-              <figcaption className="absolute bottom-6 left-6 right-6 flex items-end justify-between text-background">
-                <div>
-                  <p className="eyebrow text-background/70">Naming Ceremony</p>
-                  <p className="mt-1 font-display text-2xl">Bengaluru</p>
-                </div>
-                <span className="text-[11px] uppercase tracking-[0.24em]">'25</span>
+            <figure className="group md:col-span-7 overflow-hidden">
+              <img src={gardenImg} alt="Garden ceremony at golden hour" loading="lazy" className="max-h-[60vh] w-full object-contain transition-transform duration-[1200ms] group-hover:scale-105" />
+              <figcaption className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                <p className="eyebrow text-muted-foreground">Naming Ceremony</p>
+                <p className="mt-2 font-display text-xl text-ink">Bengaluru</p>
+                {/* <span className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground">'25</span> */}
               </figcaption>
             </figure>
-            <figure className="group relative md:col-span-5 overflow-hidden">
-              <img src={detailImg} alt="Table setting with white rose" loading="lazy" className="h-[60vh] w-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
-              <figcaption className="absolute bottom-6 left-6 right-6 text-ink">
-                <p className="eyebrow">Tablescape</p>
-                <p className="mt-1 font-display text-2xl">A Quiet Place Setting</p>
+            <figure className="group md:col-span-5 overflow-hidden">
+              <img src={detailImg} alt="Table setting with white rose" loading="lazy" className="max-h-[60vh] w-full object-contain transition-transform duration-[1200ms] group-hover:scale-105" />
+              <figcaption className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                <p className="eyebrow text-muted-foreground">Tablescape</p>
+                <p className="mt-2 font-display text-xl text-ink">A Quiet Place Setting</p>
               </figcaption>
             </figure>
-            {/* <figure className="group relative md:col-span-5 overflow-hidden">
-              <img src={corporateImg} alt="Corporate gala" loading="lazy" className="h-[55vh] w-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
-              <figcaption className="absolute bottom-6 left-6 right-6 text-background">
-                <p className="eyebrow text-background/70">Gala</p>
-                <p className="mt-1 font-display text-2xl">Annual Foundation Dinner</p>
-              </figcaption>
-            </figure> */}
-            <figure className="group relative md:col-span-7 overflow-hidden">
-              <img src={celebrationImg} alt="Birthday celebration" loading="lazy" className="h-[55vh] w-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
-              <figcaption className="absolute bottom-6 left-6 right-6 text-ink">
-                <p className="eyebrow"></p>
-                <p className="mt-1 font-display text-2xl">1st Birthday Celebration</p>
+            <figure className="group md:col-span-7 overflow-hidden">
+              <img src={celebrationImg} alt="Birthday celebration" loading="lazy" className="max-h-[55vh] w-full object-contain transition-transform duration-[1200ms] group-hover:scale-105" />
+              <figcaption className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                <p className="eyebrow text-muted-foreground">Celebration</p>
+                <p className="mt-2 font-display text-xl text-ink">1st Birthday Celebration</p>
               </figcaption>
             </figure>
           </div>
